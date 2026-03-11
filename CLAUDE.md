@@ -28,8 +28,14 @@ pytest
 # Run specific test file
 pytest conpot/tests/test_modbus_server.py
 
+# Run specific test with verbose output
+pytest -v conpot/tests/test_modbus_server.py::TestModbusServer::test_modbus_server
+
 # Run with coverage
 pytest --cov=conpot --cov-report=html
+
+# Using tox (isolated test environment)
+tox -e test
 ```
 
 ### Code Quality
